@@ -26,6 +26,9 @@ set colorcolumn=80
 " clear search results
 nnoremap <silent> // :noh<CR>
 
+" Remove trailing whitespace automatically
+autocmd FileType rst autocmd BufWritePre <buffer> %s/\s\+$//e
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on
